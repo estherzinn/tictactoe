@@ -1,0 +1,10 @@
+html {
+  background: #000000;
+}
+
+h1 {
+  font-family: 'Star Jedi', sans-serif;
+  color: #FFE81F;
+  font-size: 100px;
+  text-align: center;
+}
