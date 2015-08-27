@@ -31,4 +31,7 @@ div {
     outline: 1px solid;
     color: #FFE81F;
     float: left;
+    font-family: 'Star Jedi', sans-serif;
+    font-size: 100px;
+    text-align: center;
 }
