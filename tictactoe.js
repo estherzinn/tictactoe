@@ -101,78 +101,6 @@ $(function() {
         }
       });
 
-      function randomizer() {
-				var Found = false;
-				while(Found != true) {
-					var Random = Math.floor(Math.random() * 9) + 1;
-
-          if(Random == 1 && c1 != "X" && c1 !="O") {
-            c1 = "O";
-            $('div#cell-1').text('o');
-            count++;
-            checkWinner();
-            Found = true;
-          }
-					if(Random == 2 && c2 != "X" && c2 !="O") {
-						c2 = "O";
-						$('div#cell-2').text('o');
-						count++;
-            checkWinner();
-						Found = true;
-					}
-					if(Random == 3 && c3 != "X" && c3 !="O") {
-						$('div#cell-3').text('o');
-						c3 = "O";
-						count++;
-            checkWinner();
-						Found = true;
-					}
-					if(Random == 4 && c4 != "X" && c4 !="O") {
-						c4 = "O";
-						$('div#cell-4').text('o');
-						count++;
-            checkWinner();
-						Found = true;
-					}
-					if(Random == 5 && c5 != "X" && c5 !="O") {
-						c5 = "O";
-						$('div#cell-5').text('o');
-						count++;
-            checkWinner();
-						Found = true;
-					}
-					if(Random == 6 && c6 != "X" && c6 !="O") {
-						c6 = "O";
-						$('div#cell-6').text('o');
-						count++;
-            checkWinner();
-						Found = true;
-					}
-					if(Random == 7 && c7 != "X" && c7 !="O") {
-						c7 = "O";
-						$('div#cell-7').text('o');
-						count++;
-            checkWinner();
-						Found = true;
-					}
-					if(Random == 8 && c8 != "X" && c8 !="O") {
-						c8 = "O";
-						$('div#cell-8').text('o');
-						count++;
-            checkWinner();
-						Found = true;
-					}
-					if(Random == 9 && c9 != "X" && c9 !="O") {
-						c9 = "O";
-						$('div#cell-9').text('o');
-						count++;
-            checkWinner();
-						Found = true;
-					}
-				}
-				Found = false;
-			}
-
       			function checkWinner() {
       				if(c1 == "X" && c2 == "X" && c3 == "X") {
       					win();
@@ -227,6 +155,78 @@ $(function() {
       				}
       			}
 
+            function randomizer() {
+              var Found = false;
+              while(Found != true) {
+                var Random = Math.floor(Math.random() * 9) + 1;
+
+                if(Random == 1 && c1 != "X" && c1 !="O") {
+                  c1 = "O";
+                  $('div#cell-1').text('o');
+                  count++;
+                  checkWinner();
+                  Found = true;
+                }
+                if(Random == 2 && c2 != "X" && c2 !="O") {
+                  c2 = "O";
+                  $('div#cell-2').text('o');
+                  count++;
+                  checkWinner();
+                  Found = true;
+                }
+                if(Random == 3 && c3 != "X" && c3 !="O") {
+                  $('div#cell-3').text('o');
+                  c3 = "O";
+                  count++;
+                  checkWinner();
+                  Found = true;
+                }
+                if(Random == 4 && c4 != "X" && c4 !="O") {
+                  c4 = "O";
+                  $('div#cell-4').text('o');
+                  count++;
+                  checkWinner();
+                  Found = true;
+                }
+                if(Random == 5 && c5 != "X" && c5 !="O") {
+                  c5 = "O";
+                  $('div#cell-5').text('o');
+                  count++;
+                  checkWinner();
+                  Found = true;
+                }
+                if(Random == 6 && c6 != "X" && c6 !="O") {
+                  c6 = "O";
+                  $('div#cell-6').text('o');
+                  count++;
+                  checkWinner();
+                  Found = true;
+                }
+                if(Random == 7 && c7 != "X" && c7 !="O") {
+                  c7 = "O";
+                  $('div#cell-7').text('o');
+                  count++;
+                  checkWinner();
+                  Found = true;
+                }
+                if(Random == 8 && c8 != "X" && c8 !="O") {
+                  c8 = "O";
+                  $('div#cell-8').text('o');
+                  count++;
+                  checkWinner();
+                  Found = true;
+                }
+                if(Random == 9 && c9 != "X" && c9 !="O") {
+                  c9 = "O";
+                  $('div#cell-9').text('o');
+                  count++;
+                  checkWinner();
+                  Found = true;
+                }
+              }
+              Found = false;
+            }
+
       			function reset() {
       				c1 = 0;
       				c2 = 0;
@@ -237,16 +237,16 @@ $(function() {
       				c7 = 0;
       				c8 = 0;
       				c9 = 0;
-      				$('div#cell-1').css('background-image', 'none');
-      				$('div#cell-2').css('background-image', 'none');
-      				$('div#cell-3').css('background-image', 'none');
-      				$('div#cell-4').css('background-image', 'none');
-      				$('div#cell-5').css('background-image', 'none');
-      				$('div#cell-6').css('background-image', 'none');
-      				$('div#cell-7').css('background-image', 'none');
-      				$('div#cell-8').css('background-image', 'none');
-      				$('div#cell-9').css('background-image', 'none');
-      				count = 0;
+              count = 0;
+      				$('#cell-1').text('');
+              $('#cell-2').text('');
+              $('#cell-3').text('');
+              $('#cell-4').text('');
+              $('#cell-5').text('');
+              $('#cell-6').text('');
+              $('#cell-7').text('');
+              $('#cell-8').text('');
+              $('#cell-9').text('');
       			}
 
       			function draw() {
@@ -258,7 +258,7 @@ $(function() {
       				reset();
       			}
       			function loss() {
-      				alert("Rrrra!");
+      				alert("Rrrrr!");
       				reset();
       			}
-})
+});
